@@ -1,0 +1,10 @@
+plugins {
+    id 'buildlogic.java-module-conventions'
+}
+
+dependencies {
+    implementation project(':semver:api')
+
+    compileOnly libs.slf4j
+    compileOnly libs.akz.util
+}

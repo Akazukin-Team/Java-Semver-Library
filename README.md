@@ -1,8 +1,8 @@
-# <PLACEHOLDER_NAME>
+# Semver Library
 
-[![Build Status](https://github.com/Akazukin-Team/<PLACEHOLDER_REPO>/actions/workflows/build.yml/badge.svg)](https://github.com/Akazukin-Team/<PLACEHOLDER_REPO>/actions/workflows/build.yml)
+[![Build Status](https://github.com/Akazukin-Team/Java-Semver-Library/actions/workflows/build.yml/badge.svg)](https://github.com/Akazukin-Team/Java-Semver-Library/actions/workflows/build.yml)
 
-<PLACEHOLDER_DESCRIPTION>
+A library for Semver-related features.
 
 ---
 
@@ -22,7 +22,8 @@
 
 ## Features
 
-- <PLACEHOLDER_FEATURES>
+- It provides features such as semantic version comparison.
+- It provides a semantic version parsing function.
 
 ---
 
@@ -32,7 +33,7 @@
 
 Make sure you have the following installed:
 
-- **Java Development Kit (JDK)** version 8 or later.
+- **Java Development Kit (JDK)** version 17 or later.
 
 ---
 
@@ -46,7 +47,7 @@ Make sure you have the following installed:
    <repository>
        <id>akazukin-repo</id>
        <name>Akazukin Repository</name>
-       <url>https://maven.akazukin.org/refer/maven-<PLACEHOLDER_MAVEN>/</url>
+       <url>https://maven.akazukin.org/refer/maven-public-libraries/</url>
    </repository>
    ```
 
@@ -54,7 +55,7 @@ Make sure you have the following installed:
    ```xml
    <dependency>
        <groupId>org.akazukin</groupId>
-       <artifactId><PLACEHOLDER_ARTIFACT></artifactId>
+       <artifactId>semver</artifactId>
        <version>VERSION</version>
    </dependency>
    ```
@@ -68,13 +69,13 @@ Make sure you have the following installed:
    ```groovy
    maven {
        name = 'Akazukin Repository'
-       url = 'https://maven.akazukin.org/refer/maven-<PLACEHOLDER_MAVEN>/'
+       url = 'https://maven.akazukin.org/refer/maven-public-libraries/'
    }
    ```
 
 2. Add the dependency to the `dependencies` block in your `build.gradle` file:
    ```groovy
-   implementation 'org.akazukin:<PLACEHOLDER_ARTIFACT>:<VERSION>'
+   implementation 'org.akazukin:semver:<VERSION>'
    ```
 
 ---
@@ -93,8 +94,8 @@ To build the project from source, follow these steps:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/Akazukin-Team/<PLACEHOLDER_REPO>.git
-   cd <PLACEHOLDER_REPO>
+   git clone https://github.com/Akazukin-Team/Java-Semver-Library.git
+   cd Java-Semver-Library
    ```
 
 2. Build the project with Gradle:

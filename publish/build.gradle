@@ -1,0 +1,18 @@
+plugins {
+    id 'buildlogic.java-publish-conventions'
+}
+
+jar {
+    dependsOn(':semver:api:jar')
+    dependsOn(':semver:impl:jar')
+}
+
+dependencies {
+    libFatjar project(path: ':semver:api', configuration: 'libFatjar')
+    libFatjar project(path: ':semver:impl', configuration: 'libFatjar')
+    libFatjar project(':semver:api')
+    libFatjar project(':semver:impl')
+
+    api libs.slf4j
+    api libs.akz.util
+}
