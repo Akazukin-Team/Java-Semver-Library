@@ -49,20 +49,23 @@ public final class SemverRange implements ISemverRange {
 
     @Override
     public boolean isSuitable(final IVersionCore version) {
+        log.debug("Checking version {} against range lower {}, upper {}", version, this.lowerBound, this.upperBound);
         if (this.lowerBound != null) {
             if (this.lowerBound.isLower(version)
-                    || (!this.lowerBound.isContains() && !this.lowerBound.getBound().equals(version))) {
+                    || (!this.lowerBound.isContains() && this.lowerBound.getBound().equals(version))) {
                 log.debug("Version {} is not suitable for range {}, lower", version, this);
                 return false;
             }
         }
         if (this.upperBound != null) {
             if (this.upperBound.isGreater(version)
-                    || (!this.upperBound.isContains() && !this.upperBound.getBound().equals(version))) {
+                    || (!this.upperBound.isContains() && this.upperBound.getBound().equals(version))) {
                 log.debug("Version {} is not suitable for range {}, upper", version, this);
                 return false;
             }
         }
+
+        log.debug("Version {} is suitable for range {}", version, this);
         return true;
     }
 }
