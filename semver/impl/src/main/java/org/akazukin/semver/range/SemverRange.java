@@ -27,7 +27,7 @@ public final class SemverRange implements ISemverRange {
 
         final StringBuilder sb = new StringBuilder();
         if (this.getLowerBound() != null) {
-            sb.append("<");
+            sb.append(">");
             if (this.getLowerBound().isContains()) {
                 sb.append("=");
             }
@@ -38,7 +38,7 @@ public final class SemverRange implements ISemverRange {
                 sb.append(" ");
             }
 
-            sb.append(">");
+            sb.append("<");
             if (this.getUpperBound().isContains()) {
                 sb.append("=");
             }
